@@ -1,7 +1,7 @@
-int echoPin =  7;
-int trigPin =  8;
-int LEDPinrot = 2; // rot
-int LEDPingruen = 4; // gruen
+int echoPin =  7; // Der Echo Pin
+int trigPin =  8; // Der Trigger Pin
+int LEDPinrot = 2;
+int LEDPingruen = 4;
 int soundPin = 12; 
 
 int maximumRange = 5;
@@ -9,9 +9,9 @@ int minimumRange = 0;
 long duration, distance;
 
 void setup() {
-Serial.begin (9600); // Init communications to serial monitor
-pinMode(trigPin, OUTPUT);
-pinMode(echoPin, INPUT);
+Serial.begin (9600); // Die serielle Kommunikation starten
+pinMode(trigPin, OUTPUT); // Trigger Pin als Ausgang definieren
+pinMode(echoPin, INPUT); // Echo Pin als Eingang definieren
 pinMode(LEDPinrot, OUTPUT);
 pinMode(LEDPingruen, OUTPUT);
 }
