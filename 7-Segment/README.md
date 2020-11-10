@@ -1,5 +1,7 @@
 # 7-Segment
 
+![7-Segment](imgs/7-Segment.PNG)
+
 ## Sinn und Zweck
 
 Es soll eine Aufgabe entwickelt werden, bei der die Lötfähigkeiten trainiert und angewendet werden können. 
