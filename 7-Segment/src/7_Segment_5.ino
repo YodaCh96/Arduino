@@ -14,7 +14,7 @@ Version  Date        Author                   Comment/Reason for change
 1.0      28.02.2018  Ioannis Christodoulakis  First release  
 *******************************************************************************/
 
-// Bibliotheken für RTC-Modul
+// Bibliotheken fÃ¼r RTC-Modul
 #include <Wire.h>
 #include "RTClib.h" // Sketch --> Include Library
 
@@ -24,7 +24,7 @@ int UHR[4];
 int Zahl; // dargestellte Zahl
 
 int Delay = 1; // Verzoegerungszeit
-int n, i, j, k; // Variablen für die for-Schleife
+int n, i, j, k; // Variablen fÃ¼r die for-Schleife
 
 #define Doppelpunkt 8
 
@@ -45,14 +45,14 @@ void setup (){
   if (! rtc.begin()){ Serial.println("Couldn't find RTC"); while (1);}//if
 
   if (! rtc.isrunning()){ Serial.println("RTC is NOT running!");
-     rtc.adjust(DateTime(2018, 3, 05, 11, 57, 0));  //Einstellung für die Zeit RTC
+     rtc.adjust(DateTime(2018, 3, 05, 11, 57, 0));  //Einstellung fÃ¼r die Zeit RTC
   }//if
 
-   for(i=0; i<4; i++){ // Output für 7 Segmente
+   for(i=0; i<4; i++){ // Output fÃ¼r 7 Segmente
        pinMode(Segmente[i], OUTPUT);
       }
       
-    for(i=0; i<4; i++){ // Output für 7 Segmente
+    for(i=0; i<4; i++){ // Output fÃ¼r 7 Segmente
         pinMode(BCD[i], OUTPUT);
        }
 
@@ -64,13 +64,13 @@ void loop (){
     DateTime now = rtc.now();
                 
               UHR[0] = now.hour(), DEC;       
-              UHR[0] = UHR[0] / 10;           // Erste Ziffer für Stunden: Zehner
+              UHR[0] = UHR[0] / 10;           // Erste Ziffer fÃ¼r Stunden: Zehner
               UHR[1] = now.hour(), DEC;
-              UHR[1] = UHR[1] % 10;           // Zweite Ziffer für Stunden: Einer
+              UHR[1] = UHR[1] % 10;           // Zweite Ziffer fÃ¼r Stunden: Einer
               UHR[2] = now.minute(), DEC;
-              UHR[2] = UHR[2] / 10;           // Dritte Ziffer für Minuten: Zehner
+              UHR[2] = UHR[2] / 10;           // Dritte Ziffer fÃ¼r Minuten: Zehner
               UHR[3] = now.minute(), DEC;
-              UHR[3] = UHR[3] % 10;           // Vierte Ziffer für Minuten: Einer        
+              UHR[3] = UHR[3] % 10;           // Vierte Ziffer fÃ¼r Minuten: Einer        
                   
            /* Serial.print("Uhrzeit: ");
               Serial.print(now.hour());
