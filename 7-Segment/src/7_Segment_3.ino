@@ -60,26 +60,26 @@ void setup () {
 
   if (! rtc.isrunning()) {
    
-      rtc.adjust(DateTime(2018, 2, 27, 19, 12, 0));  //Zeit einmal einstellen für den RTC
+      rtc.adjust(DateTime(2018, 2, 27, 19, 12, 0));  //Zeit einmal einstellen fÃ¼r den RTC
   }
   
-    pinMode(BCD0A, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1A, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2A, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3A, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0B, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1B, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2B, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3B, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0C, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1C, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2C, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3C, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0D, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1D, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2D, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3D, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(Doppelpunkt, OUTPUT);    // Output für Doppelpunkt bei Zeit
+    pinMode(BCD0A, OUTPUT);      // Output fÃ¼r BCD Code 4 Stelle
+    pinMode(BCD1A, OUTPUT);      // Output fÃ¼r BCD Code 3 Stelle
+    pinMode(BCD2A, OUTPUT);      // Output fÃ¼r BCD Code 2 Stelle
+    pinMode(BCD3A, OUTPUT);      // Output fÃ¼r BCD Code 1 Stelle
+    pinMode(BCD0B, OUTPUT);      // Output fÃ¼r BCD Code 4 Stelle
+    pinMode(BCD1B, OUTPUT);      // Output fÃ¼r BCD Code 3 Stelle
+    pinMode(BCD2B, OUTPUT);      // Output fÃ¼r BCD Code 2 Stelle
+    pinMode(BCD3B, OUTPUT);      // Output fÃ¼r BCD Code 1 Stelle
+    pinMode(BCD0C, OUTPUT);      // Output fÃ¼r BCD Code 4 Stelle
+    pinMode(BCD1C, OUTPUT);      // Output fÃ¼r BCD Code 3 Stelle
+    pinMode(BCD2C, OUTPUT);      // Output fÃ¼r BCD Code 2 Stelle
+    pinMode(BCD3C, OUTPUT);      // Output fÃ¼r BCD Code 1 Stelle
+    pinMode(BCD0D, OUTPUT);      // Output fÃ¼r BCD Code 4 Stelle
+    pinMode(BCD1D, OUTPUT);      // Output fÃ¼r BCD Code 3 Stelle
+    pinMode(BCD2D, OUTPUT);      // Output fÃ¼r BCD Code 2 Stelle
+    pinMode(BCD3D, OUTPUT);      // Output fÃ¼r BCD Code 1 Stelle
+    pinMode(Doppelpunkt, OUTPUT);    // Output fÃ¼r Doppelpunkt bei Zeit
   
 
  
@@ -97,13 +97,13 @@ START MODE ZEIT
 */
                             // Modus ZEIT
               UHR[0] = now.hour(), DEC;       
-              UHR[0] = UHR[0] / 10;           // Erste Ziffer für Stunden: Zehner
+              UHR[0] = UHR[0] / 10;           // Erste Ziffer fÃ¼r Stunden: Zehner
               UHR[1] = now.hour(), DEC;
-              UHR[1] = UHR[1] % 10;           // Zweite Ziffer für Stunden: Einer
+              UHR[1] = UHR[1] % 10;           // Zweite Ziffer fÃ¼r Stunden: Einer
               UHR[2] = now.minute(), DEC;
-              UHR[2] = UHR[2] / 10;           // Dritte Ziffer für Minuten: Zehner
+              UHR[2] = UHR[2] / 10;           // Dritte Ziffer fÃ¼r Minuten: Zehner
               UHR[3] = now.minute(), DEC;
-              UHR[3] = UHR[3] % 10;           // Vierte Ziffer für Minuten: Einer    
+              UHR[3] = UHR[3] % 10;           // Vierte Ziffer fÃ¼r Minuten: Einer    
 
                   Serial.print("Uhrzeit: ");
                   Serial.print(now.hour());
