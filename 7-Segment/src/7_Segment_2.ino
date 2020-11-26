@@ -46,126 +46,101 @@ int Position[4][4]{
 
 void setup () {
   while (!Serial);
-  
-
-              
-  
-  Serial.begin(9600);
-  
+  Serial.begin(9600); 
   if (! rtc.begin()) {
-   
-
     while (1);
   }
-
   if (! rtc.isrunning()) {
-   
-      rtc.adjust(DateTime(2018, 2, 20, 14, 57, 0));  //Zeit einmal einstellen für den RTC
+      rtc.adjust(DateTime(2018, 2, 20, 14, 57, 0));  // Zeit einmal einstellen für den RTC
   }
-  
-    pinMode(BCD0A, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1A, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2A, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3A, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0B, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1B, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2B, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3B, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0C, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1C, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2C, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3C, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(BCD0D, OUTPUT);      // Output für BCD Code 4 Stelle
-    pinMode(BCD1D, OUTPUT);      // Output für BCD Code 3 Stelle
-    pinMode(BCD2D, OUTPUT);      // Output für BCD Code 2 Stelle
-    pinMode(BCD3D, OUTPUT);      // Output für BCD Code 1 Stelle
-    pinMode(Punkt, OUTPUT);     // Output für Punkt bei Datum
-    pinMode(Dpunkt, OUTPUT);    // Output für Doppelpunkt bei Zeit
-  
-
- 
+    pinMode(BCD0A, OUTPUT); // Output für BCD Code 4 Stelle
+    pinMode(BCD1A, OUTPUT); // Output für BCD Code 3 Stelle
+    pinMode(BCD2A, OUTPUT); // Output für BCD Code 2 Stelle
+    pinMode(BCD3A, OUTPUT); // Output für BCD Code 1 Stelle
+    pinMode(BCD0B, OUTPUT); // Output für BCD Code 4 Stelle
+    pinMode(BCD1B, OUTPUT); // Output für BCD Code 3 Stelle
+    pinMode(BCD2B, OUTPUT); // Output für BCD Code 2 Stelle
+    pinMode(BCD3B, OUTPUT); // Output für BCD Code 1 Stelle
+    pinMode(BCD0C, OUTPUT); // Output für BCD Code 4 Stelle
+    pinMode(BCD1C, OUTPUT); // Output für BCD Code 3 Stelle
+    pinMode(BCD2C, OUTPUT); // Output für BCD Code 2 Stelle
+    pinMode(BCD3C, OUTPUT); // Output für BCD Code 1 Stelle
+    pinMode(BCD0D, OUTPUT); // Output für BCD Code 4 Stelle
+    pinMode(BCD1D, OUTPUT); // Output für BCD Code 3 Stelle
+    pinMode(BCD2D, OUTPUT); // Output für BCD Code 2 Stelle
+    pinMode(BCD3D, OUTPUT); // Output für BCD Code 1 Stelle
+    pinMode(Punkt, OUTPUT); // Output für Punkt bei Datum
+    pinMode(Dpunkt, OUTPUT); // Output für Doppelpunkt bei Zeit
 } // setup
 
 void loop () 
 {
-  
     DateTime now = rtc.now();
-/*
-*******************************************************************************************************
-START MODE ZEIT
-*******************************************************************************************************
-*/
-                            // Modus ZEIT
+              // Modus ZEIT
               UHR[0] = now.hour(), DEC;       
-              UHR[0] = UHR[0] / 10;           // Erste Ziffer für Stunden: Zehner
+              UHR[0] = UHR[0] / 10; // Erste Ziffer für Stunden: Zehner
               UHR[1] = now.hour(), DEC;
-              UHR[1] = UHR[1] % 10;           // Zweite Ziffer für Stunden: Einer
+              UHR[1] = UHR[1] % 10; // Zweite Ziffer für Stunden: Einer
               UHR[2] = now.minute(), DEC;
-              UHR[2] = UHR[2] / 10;           // Dritte Ziffer für Minuten: Zehner
+              UHR[2] = UHR[2] / 10; // Dritte Ziffer für Minuten: Zehner
               UHR[3] = now.minute(), DEC;
-              UHR[3] = UHR[3] % 10;           // Vierte Ziffer für Minuten: Einer    
+              UHR[3] = UHR[3] % 10; // Vierte Ziffer für Minuten: Einer    
 
-                //  Serial.println(now.minute());
-                  
-          
+              // Serial.println(now.minute());
               for(n=0;n<4;n++){
               Zahl = UHR[n];
               switch(Zahl){
-                  case 0: digitalWrite(Position[n][0], LOW );     //BCD Code 0 = 0000
+                  case 0: digitalWrite(Position[n][0], LOW ); // BCD Code 0 = 0000
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 1: digitalWrite(Position[n][0], HIGH );     //BCD Code 1 = 0001
+                  case 1: digitalWrite(Position[n][0], HIGH ); // BCD Code 1 = 0001
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 2: digitalWrite(Position[n][0], LOW );     //BCD Code 2 = 0010
+                  case 2: digitalWrite(Position[n][0], LOW ); // BCD Code 2 = 0010
                           digitalWrite(Position[n][1], HIGH );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], LOW );
                           break; 
-                  case 3: digitalWrite(Position[n][0], HIGH );     //BCD Code 3 = 0011
+                  case 3: digitalWrite(Position[n][0], HIGH ); // BCD Code 3 = 0011
                           digitalWrite(Position[n][1], HIGH );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 4: digitalWrite(Position[n][0], LOW );     //BCD Code 4 = 0100
+                  case 4: digitalWrite(Position[n][0], LOW ); // BCD Code 4 = 0100
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], HIGH );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 5: digitalWrite(Position[n][0], HIGH );     //BCD Code 5 = 0101
+                  case 5: digitalWrite(Position[n][0], HIGH ); // BCD Code 5 = 0101
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], HIGH );
                           digitalWrite(Position[n][3], LOW );
                           break;          
-                  case 6: digitalWrite(Position[n][0], LOW );     //BCD Code 6 = 0110
+                  case 6: digitalWrite(Position[n][0], LOW ); // BCD Code 6 = 0110
                           digitalWrite(Position[n][1], HIGH );
                           digitalWrite(Position[n][2], HIGH );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 7: digitalWrite(Position[n][0], HIGH );     //BCD Code 7 = 0111
+                  case 7: digitalWrite(Position[n][0], HIGH ); // BCD Code 7 = 0111
                           digitalWrite(Position[n][1], HIGH );
                           digitalWrite(Position[n][2], HIGH );
                           digitalWrite(Position[n][3], LOW );
                           break;
-                  case 8: digitalWrite(Position[n][0], LOW );    //BCD Code 8 = 1000
+                  case 8: digitalWrite(Position[n][0], LOW ); // BCD Code 8 = 1000
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], HIGH );
                           break;
-                  case 9: digitalWrite(Position[n][0], HIGH );    //BCD Code 9 = 1001
+                  case 9: digitalWrite(Position[n][0], HIGH ); // BCD Code 9 = 1001
                           digitalWrite(Position[n][1], LOW );
                           digitalWrite(Position[n][2], LOW );
                           digitalWrite(Position[n][3], HIGH );
                           break;    
-                 }//switch
-      
-                 
-                 delay(5);
-                  
-             }//for
-         
+                 } // switch
+                 delay(5); 
+             } // for
     }
