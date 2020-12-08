@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "name": "Arduino",
+      "path": "..\\Arduino"
+    },
+    {
+      "path": "..\\..\\C-Programmierung"
+    },
+    {
+      "path": "..\\..\\Java"
+    },
+    {
+      "path": "..\\..\\LaTeX"
+    },
+    {
+      "path": "..\\..\\MATLAB"
+    },
+    {
+      "path": "..\\..\\Python"
+    },
+    {
+      "path": "..\\..\\PythonLab"
+    },
+    {
+      "path": "..\\..\\SQL"
+    },
+    {
+      "name": "Neural_Networks",
+      "path": "..\\..\\Neural_Networks"
+    }
+  ],
+  "settings": {
+    "activestate.promptRuntimeCreation": false
+  }
+}

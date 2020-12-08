@@ -30,7 +30,8 @@ int SSTaster= A0;
 
 void setup () {
   while (!Serial);
-  MODE = 1 ; // MODE 1 = Zeit anzeigen
+    // Zeit anzeigen
+  MODE = 1 ; 
 
   Serial.begin(9600);
   

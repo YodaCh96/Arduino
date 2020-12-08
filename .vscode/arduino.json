@@ -1,0 +1,9 @@
+{
+    "sketch": "7_Segment_1.ino",
+    "port": "COM5",
+    "board": "arduino:avr:uno",
+    "output": "../build",
+    "debugger": "jlink",
+    "prebuild": "bash prebuild.sh",
+    "programmer": "ArduinoISP"
+}
