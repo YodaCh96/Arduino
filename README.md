@@ -1,19 +1,9 @@
-# Getting Started
+# Willkommen bei Arduino
 
-Before you can start working with Arduino, you need to make sure you have the IDE software installed on your computer. 
-This program allows you to write, view and upload the code to your Arduino Uno board.  You can download the IDE for free on Arduino’s website.
+> Arduino macht es so einfach wie möglich, winzige Computer, sogenannte Mikrocontroller, zu programmieren, um Objekte interaktiv zu machen.
 
-Once the IDE is installed, you will need to connect your Arduino to your computer.  
-To do this, plug one end of the USB cable to the Arduino Uno and then the other end of the USB to your computer’s USB port.
+Jeder von uns verwendet täglich Technologien. Die meisten von uns überlassen jedoch die Programmierung und Elektronik den Ingenieuren, weil wir denken das sei zu kompliziert und mühselig. Tatsächlich können dies aber spassige und aufregende Aktivitäten sein. Dank Arduino lernen Designer, Künstler, Bastler und Stundenten jeden Alters, Dinge zu erschaffen, die aufleuchten, sich bewegen und mit Menschen, Tieren, Pflanzen und dem Rest der Welt interagieren.
 
-# Select The Board
+Im Verlauf der Jahre wurde Arduino als "Gehirn" in tausenden Projekten eingesetzt, eines kreativer als das andere. Eine weltweite Gemeinschaft von schöpferischen Menschen hat sich um diese Open-Source-Plattform versammelt, um sich von Personal Computing Fabrication weiter zu entwickeln und in eine neue Welt der Beteiligung, Zusammenarbeit und des Austauschs einzutauchen.
 
-Once the board is plugged in, you will need to open the IDE and click on **Tools > Board > Arduino Uno** to select the board.
-
-![Board](images/select-arduino-board.png)
-
-# Select Serial Port
-
-Next, you have to tell the Arduino which port you are using on your computer.  To select the port, go to **Tools > Port** and then select the port that says **Arduino**.
-
-![Port](images/select-arduino-port.png)
+Arduino ist offen und einfach. Es basiert auf Erkenntnissen, die wir beim Unterrichten unserer Klassen gewonnen haben; wenn Du davon ausgehst, dass das Erlernen von digitalen Technologien einfach und zugänglich ist, dann wirst Du es auch so empfinden. Plötzlich werden aus Elektronik und Programmcode kreative Werkzeuge, die jeder benutzen kann - wie Pinsel und Farbe. Dieses Repository führt Dich spielerisch in die Grundlagen ein, indem Du beim Lernen kreative Projekte zum Leben erweckst. Sobald Du die Grundlangen gemeistert hast, steht Dir eine ganze Palette von Software und Schaltkreisen zur Verfügung, um etwas Bewundernswertes zu erschaffen und anderen mit Deinen Erfindungen ein Lächeln auf die Lippen zu zaubern.
