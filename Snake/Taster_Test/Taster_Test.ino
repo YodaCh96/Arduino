@@ -3,10 +3,10 @@
 #define rechts A1
 #define links A3
 
-int switchStatea0 = 0;
-int switchStatea1 = 0;
-int switchStatea2 = 0;
-int switchStatea3 = 0;
+//int switchStatea0 = 0;
+//int switchStatea1 = 0;
+//int switchStatea2 = 0;
+//int switchStatea3 = 0;
 
 void setup(){
   pinMode (auf, OUTPUT);
@@ -18,11 +18,11 @@ void setup(){
 }
 
 void loop(){
-
-  switchStatea0 = digitalRead(A0);
-  switchStatea1 = digitalRead(A1);
-  switchStatea2 = digitalRead(A2);
-  switchStatea3 = digitalRead(A3);
+  
+  int switchStatea0 = digitalRead(A0);
+  int switchStatea1 = digitalRead(A1);
+  int switchStatea2 = digitalRead(A2);
+  int switchStatea3 = digitalRead(A3);
   
  if (switchStatea0 == HIGH){
   Serial.println("Auf!!!");
